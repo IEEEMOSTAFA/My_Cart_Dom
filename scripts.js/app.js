@@ -7,6 +7,47 @@ for (const btn of allBtn) {
         // console.log(name,price,category);
 
         const selectedContainer = document.getElementById("selected-players-container");
+
+        event.target.setAttribute("disabled",false);
+       
+
+        
+
+        const firstCartCount = getConvertedValue("cart");
+        // console.log(firstCartCount);
+        if(firstCartCount + 1 > 6){
+            alert("limit sesh ar hobe na");
+            return;
+        }
+        const firstLeftCount = getConvertedValue("left");
+        if(firstLeftCount - 1 < 0){
+            alert("Ar jete Parbe na");
+            return;
+        }
+
+        event.target.parentNode.style.backgroundColor = "gray";
+
+
+
+
+
+
+
+
+        // updated budget::
+        const budget = getConvertedValue("budget");
+        document.getElementById("budget").innerText = budget - parseInt(price);
+        // Update Cart
+        const cartCount = getConvertedValue("cart");
+        document.getElementById("cart").innerText = cartCount + 1;
+
+        const leftCount = getConvertedValue("left");
+        document.getElementById("left").innerText = leftCount - 1;
+
+        // const secondCartCount = getConvertedValue("cart");
+        // console.log(secondCartCount);
+
+
         const div = document.createElement("div");
         div.classList.add("flex", "gap-5");
         // div.classList.add("px-2");
@@ -32,6 +73,14 @@ for (const btn of allBtn) {
     });
 
 }
+
+
+
+
+
+
+
+
 function updateGrandTotal(status) {
     const totalCost = getConvertedValue("total-cost");
     if (status == undefined) {
