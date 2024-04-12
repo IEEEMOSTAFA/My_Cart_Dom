@@ -9,6 +9,7 @@
     <!-- Daisy UI and Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="styles/style.css"></script> -->
 
 </head>
 
@@ -22,49 +23,49 @@
 
         <div class="main-container flex justify-between">
             <!-- main player container structure -->
-            <div class="players-container ">
+            <div class="players-container">
                 <div class="player-btn shadow-md rounded-lg p-4 bg-slate-400 mb-3 w-40">
-                    <h5>Tamim Iqbal</h5>
+                    <h5>Tamim Iqbal </h5>
+                    <h5>Price: <span> 300</span>$</h5>
+                    <h5>Category: <span> Bat</span></h5>
+                    <button class="add-btn  bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-xl">
+                        Add to cart
+                    </button>
+                </div>
+                <div class="player-btn shadow-md rounded-lg p-4 bg-slate-400 mb-3 w-40">
+                    <h5>Shakib Al Hasan</h5>
                     <h5>Price: <span>300</span>$</h5>
+                    <h5>Category: <span>all-rounder</span></h5>
+                    <button class="add-btn bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-xl">
+                        Add to cart
+                    </button>
+                </div>
+                <div class="player-btn shadow-md rounded-lg p-4 bg-slate-400 mb-3 w-40">
+                    <h5>Mushfiq</h5>
+                    <h5>Price: <span>200</span>$</h5>
                     <h5>Category: <span>Bat</span></h5>
                     <button class="add-btn bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-xl">
                         Add to cart
                     </button>
                 </div>
                 <div class="player-btn shadow-md rounded-lg p-4 bg-slate-400 mb-3 w-40">
-                    <h5>Tamim Iqbal</h5>
-                    <h5>Price: <span>300</span>$</h5>
+                    <h5>Liton Das</h5>
+                    <h5>Price: <span>400</span>$</h5>
                     <h5>Category: <span>Bat</span></h5>
                     <button class="add-btn bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-xl">
                         Add to cart
                     </button>
                 </div>
                 <div class="player-btn shadow-md rounded-lg p-4 bg-slate-400 mb-3 w-40">
-                    <h5>Tamim Iqbal</h5>
-                    <h5>Price: <span>300</span>$</h5>
+                    <h5>Mustafiz</h5>
+                    <h5>Price: <span>400</span>$</h5>
                     <h5>Category: <span>Bat</span></h5>
                     <button class="add-btn bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-xl">
                         Add to cart
                     </button>
                 </div>
                 <div class="player-btn shadow-md rounded-lg p-4 bg-slate-400 mb-3 w-40">
-                    <h5>Tamim Iqbal</h5>
-                    <h5>Price: <span>300</span>$</h5>
-                    <h5>Category: <span>Bat</span></h5>
-                    <button class="add-btn bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-xl">
-                        Add to cart
-                    </button>
-                </div>
-                <div class="player-btn shadow-md rounded-lg p-4 bg-slate-400 mb-3 w-40">
-                    <h5>Tamim Iqbal</h5>
-                    <h5>Price: <span>300</span>$</h5>
-                    <h5>Category: <span>Bat</span></h5>
-                    <button class="add-btn bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-xl">
-                        Add to cart
-                    </button>
-                </div>
-                <div class="player-btn shadow-md rounded-lg p-4 bg-slate-400 mb-3 w-40">
-                    <h5>Tamim Iqbal</h5>
+                    <h5>Liton Das</h5>
                     <h5>Price: <span>300</span>$</h5>
                     <h5>Category: <span>Bat</span></h5>
                     <button class="add-btn bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-xl">
@@ -83,11 +84,11 @@
                 </div>
                 <div id="selected-players-container"></div>
                 <hr>
-                <h3 class="padding text-center font-bold">Total Cost : <span id="total-cost">0</span> $</h3>
+                <h3 class="padding text-center font-bold">Total Cost :<span id="total-cost">0</span> $</h3>
                 <hr>
                 <div class="coupon-code">
-                    <input id="coupon-code" class="border-spacing-8 mx-2" type="text" placeholder="coupon-code ">
-                    <button id="apply-btn" class="apply-btn bg-sky-500 rounded-xl">Apply</button>
+                    <input id="coupon-code" class="border-spacing-8 mx-2" type="text" placeholder="coupon-code">
+                    <button onclick="updateGrandTotal('apply-btn')" id="apply-btn" class="apply-btn bg-sky-500 rounded-xl">Apply</button>
                 </div>
                 <hr>
                 <h3 class="padding text-center font-bold">Grand Total : <span id="grand-total">0</span> $</h3>
